@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Insert a new book</title>
+        <link rel="stylesheet" type="text/css" href="/static/style.css">
+    </head>
+    <body>
+        <div class="pagetitle">
+            <h1>Insert a new book</h1>
+        </div>
+        <div id="main">
+            <form method="post" action="{{ url_for('add_book') }}">
+                <label for="isbn">ISBN:</label>
+                <input type="text" name="isbn"><br />
+
+                <label for="title">Title:</label>
+                <input type="text" name="title"><br />
+
+                <label for="title">Author:</label>
+                <input type="text" name="author"><br />
+
+                <label for="title">Quote:</label>
+                <input type="text" name="quote"><br />  
+
+                <input type="submit">             
+            </form>
+        </div>
+    </body>
+</html>

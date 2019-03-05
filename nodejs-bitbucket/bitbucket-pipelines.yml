@@ -1,0 +1,21 @@
+image: node:8
+
+pipelines:
+  default:
+    - step:
+        script:
+          # Install Google Cloud SDK
+          - export CLOUDSDK_CORE_DISABLE_PROMPTS=1
+          # Google Cloud SDK is pinned for build reliability. Bump if the SDK complains about deprecation.
+          - SDK_VERSION=228.0.0
+          - SDK_FILENAME=google-cloud-sdk-${SDK_VERSION}-linux-x86_64.tar.gz
+          - curl -O -J https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/${SDK_FILENAME}
+          - tar -zxvf ${SDK_FILENAME} --directory ${HOME}
+          - export PATH=${PATH}:${HOME}/google-cloud-sdk/bin
+          # Authenticate
+          - echo "key = '${GOOGLE_API_KEY}'" > api_key.py
+          - echo ${GOOGLE_CLIENT_SECRET} > client-secret.json
+          - gcloud auth activate-service-account --key-file client-secret.json
+          # Install app & dependencies, deploy
+          - npm install
+          - gcloud --quiet --verbosity=debug app deploy app.yml --promote

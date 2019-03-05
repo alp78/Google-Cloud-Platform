@@ -1,0 +1,15 @@
+{
+  "name": "flexappengine-cloudsql-mysql",
+  "description": "Node.js MySQL sample for Cloud SQL on Flex App Engine.",
+  "version": "0.0.1",
+  "engines": {
+    "node": "8.x.x"
+  },
+  "dependencies": {
+    "express": "4.16.3",
+    "mysql": "^2.15.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

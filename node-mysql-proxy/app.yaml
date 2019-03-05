@@ -1,0 +1,10 @@
+runtime: nodejs
+env: flex
+env_variables:
+  SQL_HOST: 35.225.25.169
+  SQL_USER: root
+  SQL_PASSWORD: root
+  SQL_DATABASE: test-db
+  INSTANCE_CONNECTION_NAME: node-mysql-229509:us-central1:mysql-instance
+beta_settings:
+  cloud_sql_instances: node-mysql-229509:us-central1:mysql-instance

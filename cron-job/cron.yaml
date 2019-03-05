@@ -1,0 +1,4 @@
+cron:
+- description: "1 request per minute"
+  url: /cron
+  schedule: every 1 mins

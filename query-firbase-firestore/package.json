@@ -1,0 +1,8 @@
+{
+  "name": "test-firebase-db",
+  "version": "0.0.1",
+  "dependencies": {
+    "@google-cloud/firestore": "^0.19.0",
+    "firebase-admin": "^6.5.0"
+  }
+}

@@ -1,0 +1,16 @@
+Enable API's:
+
+Cloud Build API
+App Engine Admin API
+
+Permissions:
+Cloud Build - Editor
+App Engine - Admin
+Storage Object - Admin
+
+CLOUDSDK_CORE_PROJECT
+GOOGLE_API_KEY		
+GOOGLE_CLIENT_SECRET
+
+
+

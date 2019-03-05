@@ -1,0 +1,13 @@
+runtime: php72
+
+handlers:
+- url: .*
+  script: auto
+
+env_variables:
+  MYSQL_USER: root
+  MYSQL_PASSWORD: root
+  MYSQL_DSN: 'mysql:dbname=transactions;unix_socket=/cloudsql/storage-options-228714:us-central1:sql-transactions'
+
+beta_settings:
+  cloud_sql_instances: "storage-options-228714:us-central1:sql-transactions"
